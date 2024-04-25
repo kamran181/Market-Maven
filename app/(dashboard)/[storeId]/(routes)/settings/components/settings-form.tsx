@@ -26,6 +26,7 @@ import { AlertModal } from "@/components/modals/alert-modal"
 import { ApiAlert } from "@/components/ui/api-alert"
 import { useOrigin } from "@/hooks/use-origin"
 
+//Creating a form Schema using zod resolver for Type Safety
 const formSchema = z.object({
   name: z.string().min(2),
 });

@@ -16,6 +16,8 @@ const SettingsPage = async ({
     redirect('/sign-in');
   }
 
+
+  //Fetching the store id and user id from the Db
   const store = await prismadb.store.findFirst({
     where: {
       id: params.storeId,
@@ -29,7 +31,7 @@ const SettingsPage = async ({
 
   return ( 
     <div className="flex-col">
-      <div className="flex-1 space-y-4 p-8 pt-6">
+      <div className="flex-1 space-y-4 p-8 pt-6"> 
         <SettingsForm initialData={store} />
       </div>
     </div>

@@ -4,6 +4,8 @@ import { auth } from "@clerk/nextjs";
 import prismadb from "@/lib/prismadb";
 
 
+//This Route will Update the Store
+//In next 13 we create restfull api using HTTP verbs: GET, HEAD, OPTIONS, POST, PUT, DELETE, and PATCH. 
 export async function PATCH(
   req: Request,
   { params }: { params: { storeId: string } }
@@ -44,6 +46,7 @@ export async function PATCH(
 };
 
 
+//This Route will Delete the Store
 export async function DELETE(
   req: Request,
   { params }: { params: { storeId: string } }
